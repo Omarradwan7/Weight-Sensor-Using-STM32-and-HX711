@@ -93,7 +93,7 @@ int32_t hx711_get_value(void) //getting the weight from the module.
 	uint32_t data = 0; //the data (weight) is firstly set to 0.
 	uint8_t dout; // this is to show whether at this bit, if theres a number that should be recorded. 
 	int32_t filler; //to fill the rest of the 32 bits.
-	int32_t ret_value; //final value to return after adding the filling and the data togethor.
+	int32_t ret_value; //final value to return after adding the filling and the data together.
 	
 	for (uint8_t i = 0; i < 24; i++) //read 24 bit data + set gain and start next conversion
 	{ 

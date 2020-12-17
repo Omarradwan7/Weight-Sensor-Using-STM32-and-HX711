@@ -132,13 +132,6 @@ uint8_t hx711_is_ready(void) //making sure that the HX711 module is ready
 	return HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_3) == GPIO_PIN_RESET; //reading a value from it, the reseting it.
 }
 
-void hx711_powerDown(void) //power down the HX711
-{
-	HAL_GPIO_WritePin(GPIOA, GPIO_PIN_4, GPIO_PIN_RESET);  //reseting the pin to 0.
-	HAL_Delay(1); //delay
-	HAL_GPIO_WritePin(GPIOA, GPIO_PIN_4, GPIO_PIN_SET); //setting the pin to 1.
-}
-
 //void UART0Tx(char c) //function to use UART0 to transmit the weight to mobile application.
 //{
 // /* send a character to UART0 */
